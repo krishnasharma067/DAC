@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+class Employee{  //class emp...
+	public:
+		int id;// declare int id..
+		char name[50];//char length of 40...
+		int numOfEmp,i;//numOfEmp to take imp and store...
+void getData()// function to get data..
+{
+	cout<<"--------------ENTER THE DATA---------------";
+	cout<<endl;
+	cout<<"Enter the number of of employee : "<<endl;
+	cin>>numOfEmp;
+	Employee Emp[numOfEmp];//we created the obj of clas employee name EMP.
+	for(i=0;i<numOfEmp;i++)
+	{
+		cout<<"Please enter the details of the ----"<<i+1<<"Employee  : "<<endl;
+		cout<<"Enter the name of the employee : "<<endl;
+		cin>>Emp[i].name;
+		cout<<"Enter the id of the employee : "<<endl;
+		cin>>Emp[i].id;
+	}
+	cout<<"---------------DETAILS---------------"<<endl;
+	cout<<"---------------OF EMP---------------"<<endl;
+	for(i=0;i<numOfEmp;i++)
+	{
+		cout<<Emp[i].id<<"  "<<Emp[i].name<<endl;
+	}
+}
+};
+int main()
+{
+	Employee Emp;
+	Emp.getData();
+}
